@@ -1,0 +1,11 @@
+{
+  "name": "chat_project",
+  "version": "1.0.0",
+  "description": "this chat application will work with openfire.",
+  "main": "server.js",
+  "scripts": {
+    "test": "node "
+  },
+  "author": "Kunal Pal",
+  "license": "MIT"
+}

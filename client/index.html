@@ -11,31 +11,36 @@
     <link rel="stylesheet" type="text/css" href="index.css"> 
   </head>
   <body>
-    <h2>SignUP Form</h2>
+    <h2>New User SignUp</h2>
 
-<form action="/action_page.php">
-  <div class="imgcontainer">
-    <img src="index.png" alt="Avatar" class="avatar">
-  </div>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">SignUp</button>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="chatpage.html">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="index.png" alt="Avatar" class="avatar">
+    </div>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
         
-    <button type="submit">SignUp</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
+      <button type="submit" onclick="signup();">SignUp</button>
+    </div>
 
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+   <br>
+   <h2>Already a user Log In</h2>
+   <a href="chatpage.html"><button style="width:auto;">LogIn</button></a>
   </body>
 </html>

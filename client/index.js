@@ -9,7 +9,6 @@ window.onclick = function(event) {
 }
 
 var signup = function(){
-
 $.ajax({
   type: "POST",
   url: "http://localhost:3000/api/createUser",
@@ -24,5 +23,4 @@ $.ajax({
       console.log('succes: '+data);
   }
 })
-
 }

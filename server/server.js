@@ -1,7 +1,6 @@
 var Hapi = require('hapi');
 var requestPromise = require('minimal-request-promise');
 var Joi = require('joi');
-
 var server = new Hapi.Server({
     app: {
         name: 'Chat_App'

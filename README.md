@@ -1,12 +1,12 @@
-CHAT APPLICATION
+##**CHAT APPLICATION**
 This is a Chat Application which You can Easily
 integrate in your Node Project. 
 
-External Dependencies
-Openfire
-Node
+##**External Dependencies**
+1. Openfire
+2. Node
 
-Steps To Run
+##**Steps To Run**
 1. Clone or Download the project
       ```https://github.com/Kunal8195/chat_master.git```
 2. Now go inside server folder of project folder and run the follwing command for acquiring all
@@ -17,7 +17,7 @@ Steps To Run
 4. you should see the message of server listening on port 3000 
 
 
-Start the Chat
+##**Start the Chat**
 In your Browser open the following link-
       ```http://localhost:3000```
 

@@ -1,6 +1,6 @@
 // Get the modal
 var modal = document.getElementById('id01');
-
+console.log("sd,fjgksadhyfkashdfkjash")
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -9,6 +9,7 @@ window.onclick = function(event) {
 }
 
 var signup = function(){
+  console.log("I am Here");
 $.ajax({
   type: "POST",
   url: "http://localhost:3000/api/createUser",

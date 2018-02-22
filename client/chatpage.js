@@ -118,17 +118,17 @@ function onSubscriptionRequest(stanza) {
 
 function onPresence(presence) {
   log('onPresence:');
-  var presence_type = $(presence).attr('type'); // unavailable, subscribed, etc...
-  var from = $(presence).attr('from'); // the jabber_id of the contact
+  var presence_type = $(presence).attr('type'); 
+  var from = $(presence).attr('from');
   if (!presence_type) presence_type = "online";
   log('	>' + from + ' --> ' + presence_type);
   if (presence_type != 'error') {
     if (presence_type === 'unavailable') {
-      // Mark contact as offline
+      // Making contact as offline
     } else {
-      var show = $(presence).find("show").text(); // this is what gives away, dnd, etc.
+      var show = $(presence).find("show").text(); 
       if (show === 'chat' || show === '') {
-        // Mark contact as online
+        // Making contact as online
       } else {
         // etc...
       }
@@ -154,7 +154,6 @@ function enterRoom(room) {
   log("enterRoom: " + room);
   connection.muc.init(connection);
   connection.muc.join(room, $('#jid').get(0).value, room_msg_handler, room_pres_handler);
-  //connection.muc.setStatus(room, $('#jid').get(0).value, 'subscribed', 'chat');
 }
 
 function room_msg_handler(a, b, c) {
@@ -169,7 +168,6 @@ function room_pres_handler(a, b, c) {
 
 function exitRoom(room) {
   log("exitRoom: " + room);
-  //TBD
 }
 
 function rawInput(data) {
@@ -182,8 +180,8 @@ function rawOutput(data) {
 
 $(document).ready(function() {
 
-  $('#jid').get(0).value = "pippo@mydomain.com";
-  $('#pass').get(0).value = "pippo";
+  $('#jid').get(0).value = "username@mydomain.com";
+  $('#pass').get(0).value = "userpassword";
 
   $('#connect').bind('click', function() {
     var url = BOSH_SERVICE;

@@ -30,6 +30,7 @@ $.ajax({
   },
   success: function(data){
       alert("User created Successfully");
+      window.location.href = 'chatpage.html'
       console.log('succes: '+data);
   }
 })

@@ -16,7 +16,8 @@ window.onclick = function(event) {
     }
 }
 
-var signup = function(){
+var signup = function(event){
+  event.preventDefault();
   console.log("I am Here");
 $.ajax({
   type: "POST",
@@ -24,8 +25,8 @@ $.ajax({
   ContentType:'application/json',
   dataType:'json',
   data:{
-    username:'amitabh',
-    password:'amitabh@123'
+    username:$('.uname').get(0).value,
+    password:$('.psw').get(0).value
   },
   success: function(data){
       alert("User created Successfully");
